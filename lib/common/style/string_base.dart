@@ -15,4 +15,7 @@ abstract class XSStringBase {
   String network_error_403;
   String network_error_401;
   String network_error;
+
+  String app_empty;
+  String load_more_text;
 }

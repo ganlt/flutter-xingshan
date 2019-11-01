@@ -30,4 +30,9 @@ class XSStringEn extends XSStringBase {
   String network_error_401 = "Http 401";
   @override
   String network_error = "network error";
+
+  @override
+  String app_empty = "empty";
+  @override
+  String load_more_text = "load more";
 }

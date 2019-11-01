@@ -112,13 +112,13 @@ class _XSTabBarState extends State<XSTabBarWidget>
         ),
         bottomNavigationBar: new Material(
           //为了适配主题风格，包一层Material实现风格套用
-          color: Theme.of(context).primaryColor, //底部导航栏主题颜色
+          color: Colors.white, //底部导航栏主题颜色
           child: new SafeArea(
             child: new TabBar(
               //TabBar导航标签，底部导航放到Scaffold的bottomNavigationBar中
               controller: _tabController, //配置控制器
               tabs: widget.tabItems,
-              labelColor: XSColors.white,
+              // labelColor: XSColors.primaryTabValue,
               labelPadding: EdgeInsets.only(top: 6, bottom: 3),
               labelStyle: TextStyle(
                 fontSize: 10,

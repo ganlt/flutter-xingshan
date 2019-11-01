@@ -30,4 +30,9 @@ class XSStringZh extends XSStringBase {
   String network_error_401 = "[401错误可能: 未授权 \\ 授权登录失败 \\ 登录过期]";
   @override
   String network_error = "网络错误";
+
+  @override
+  String app_empty = "数据为空";
+  @override
+  String load_more_text = "加载更多";
 }

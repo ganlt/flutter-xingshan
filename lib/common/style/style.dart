@@ -27,6 +27,8 @@ class XSColors {
   static const String actionBlueString = "#267aff";
   static const String webDraculaBackgroundColorString = "#282a36";
 
+  static const Color primaryTabValue = Color(0xFFb2b2b2);
+
   static const Color primaryValue = Color(0xFF24292E);
   static const Color primaryLightValue = Color(0xFF42464b);
   static const Color primaryDarkValue = Color(0xFF121917);
@@ -213,6 +215,15 @@ class XSICons {
   static const String DEFAULT_USER_ICON = 'static/images/logo.png';
   static const String DEFAULT_IMAGE = 'static/images/default_img.png';
 
+  static const String MY_MY_TASK = 'assets/images/icons/my_my_task.png';
+  static const String MY_MY_TRACK = 'assets/images/icons/my_my_track.png';
+  static const String MY_MY_RANKING = 'assets/images/icons/my_my_ranking.png';
+  static const String MY_MY_BOX = 'assets/images/icons/my_my_box.png';
+  static const String MY_MY_IMO = 'assets/images/icons/my_my_imo+.png';
+  static const String MY_MY_DYNAMIC = 'assets/images/icons/my_my_dynamic.png';
+  static const String MY_MY_SETTING = 'assets/images/icons/my_my_setting.png';
+  // static const String MY_MY_TASK = 'assets/images/icons/my_my_task@2x.png';
+
   static const IconData HOME =
       const IconData(0xe624, fontFamily: XSICons.FONT_FAMILY);
   static const IconData MORE =
@@ -220,16 +231,11 @@ class XSICons {
   static const IconData SEARCH =
       const IconData(0xe61c, fontFamily: XSICons.FONT_FAMILY);
 
-  static const IconData HOME_WALK =
-      const IconData(0xe684, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData HOME_MESSAGE =
-      const IconData(0xe818, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData HOME_PROJECT =
-      const IconData(0xe6d0, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData HOME_FOUND =
-      const IconData(0xe6d0, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData HOME_MY =
-      const IconData(0xe6d0, fontFamily: XSICons.FONT_FAMILY);
+  static const String TAB_WALK = 'assets/images/icons/tab_walk.png';
+  static const String TAB_MESSAGE = 'assets/images/icons/tab_message.png';
+  static const String TAB_PROJECT = 'assets/images/icons/tab_project.png';
+  static const String TAB_FOUND = 'assets/images/icons/tab_found.png';
+  static const String TAB_MY = 'assets/images/icons/tab_my.png';
 
   static const IconData ISSUE_EDIT_H1 = Icons.filter_1;
   static const IconData ISSUE_EDIT_H2 = Icons.filter_2;
