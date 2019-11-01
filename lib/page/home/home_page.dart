@@ -1,160 +1,80 @@
+import 'dart:async';
+import 'dart:io';
+
+import 'package:android_intent/android_intent.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:dio/dio.dart';
+import 'package:xingshan/common/localization/default_localizations.dart';
+import 'package:xingshan/common/style/style.dart';
+import 'package:xingshan/common/utils/common_utils.dart';
+import 'package:xingshan/common/utils/navigator_utils.dart';
+// import 'package:xingshan/page/dynamic/dynamic_page.dart';
+import 'package:xingshan/page/my/my_page.dart';
+// import 'package:xingshan/page/trend/trend_page.dart';
+import 'package:xingshan/widget/tabbar_widget.dart';
+import 'package:xingshan/widget/titlebar_widget.dart';
 
-class XSHomepage extends StatefulWidget {
-  XSHomepage({Key key, this.title}) : super(key: key);
+class XSHomePage extends StatelessWidget {
+  static final String sName = "home";
 
-  final String title;
-  @override
-  _XSHomepageState createState() {
-    return new _XSHomepageState();
+  /// 不退出
+  Future<bool> _dialogExitApp(BuildContext context) async {
+    ///如果是 android 回到桌面
+    if (Platform.isAndroid) {
+      AndroidIntent intent = AndroidIntent(
+        action: 'android.intent.action.MAIN',
+        category: "android.intent.category.HOME",
+      );
+      await intent.launch();
+    }
+
+    return Future.value(false);
   }
-}
 
-class _XSHomepageState extends State<XSHomepage> {
-  String _name;
-  String _password;
-  String _imagesCode;
-  TextEditingController unameController = new TextEditingController();
-  TextEditingController pwdController = new TextEditingController();
-  TextEditingController imagesController = new TextEditingController();
-  GlobalKey formKey = new GlobalKey<FormState>();
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        Column(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              height: 120.0,
-              alignment: Alignment.centerLeft,
-              padding: EdgeInsets.only(left: 30.0),
-              color: Colors.white,
-              child: Icon(Icons.access_alarm),
-            ),
-            Container(
-              color: Colors.white,
-              alignment: Alignment.center,
-              padding: EdgeInsets.only(left: 30.0, right: 30.0),
-              child: new Container(
-                child: buildForm(),
-              ),
-            ),
-          ],
-        ),
-      ],
+  _renderTab(icon, text) {
+    return new Tab(
+      child: new Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[new Icon(icon, size: 16.0), new Text(text)],
+      ),
     );
   }
 
-  Widget buildForm() {
-    return Form(
-      //设置globalKey，用于后面获取FormState
-      key: formKey,
-      //开启自动校验
-      autovalidate: true,
-      child: Column(
-        children: <Widget>[
-          TextFormField(
-              autofocus: false,
-              //keyboardType: TextInputType.number,
-              //键盘回车键的样式
-              // textInputAction: TextInputAction.next,
-              controller: unameController,
-              decoration: InputDecoration(
-                  labelText: "用户名或邮箱",
-                  hintText: "用户名或邮箱",
-                  icon: Icon(Icons.person)),
-              // 校验用户名
-              onSaved: (v) {
-                _name = v;
-              },
-              validator: (v) {
-                return v.trim().length > 0 ? null : "用户名不能为空";
-              }),
-          TextFormField(
-              autofocus: false,
-              controller: pwdController,
-              decoration: InputDecoration(
-                  labelText: "密码", hintText: "您的登录密码", icon: Icon(Icons.lock)),
-              obscureText: true,
-              onSaved: (v) {
-                _password = v;
-              },
-              //校验密码
-              validator: (v) {
-                return v.trim().length > 5 ? null : "密码不能少于6位";
-              }),
-          Flex(
-            direction: Axis.horizontal,
-            children: <Widget>[
-              Expanded(
-                flex: 2,
-                child: TextFormField(
-                    autofocus: false,
-                    controller: imagesController,
-                    decoration: InputDecoration(
-                        labelText: "验证码",
-                        hintText: "验证码",
-                        icon: Icon(Icons.alternate_email)),
-                    //obscureText: true,
-                    onSaved: (v) {
-                      _imagesCode = v;
-                    },
-                    //校验密码
-                    validator: (v) {
-                      return v.trim().length == 6 ? null : "验证码为6位";
-                    }),
-              ),
-            ],
-          ),
-
-          // 登录按钮
-          Padding(
-            padding: const EdgeInsets.only(top: 28.0),
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: RaisedButton(
-                    padding: EdgeInsets.all(15.0),
-                    child: Text("登录"),
-                    color: Theme.of(context).primaryColor,
-                    textColor: Colors.white,
-                    onPressed: () {
-                    },
-                  ),
-                ),
-              ],
-            ),
-          )
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    List<Widget> tabs = [
+      _renderTab(XSICons.MAIN_DT, CommonUtils.getLocale(context).home_walk),
+      _renderTab(XSICons.MAIN_QS, CommonUtils.getLocale(context).home_message),
+      _renderTab(XSICons.MAIN_QS, CommonUtils.getLocale(context).home_project),
+      _renderTab(XSICons.MAIN_QS, CommonUtils.getLocale(context).home_found),
+      _renderTab(XSICons.MAIN_MY, CommonUtils.getLocale(context).home_my),
+    ];
+    ///增加返回按键监听
+    return WillPopScope(
+      onWillPop: () {
+        return _dialogExitApp(context);
+      },
+      child: new XSTabBarWidget(
+        type: XSTabBarWidget.BOTTOM_TAB,
+        tabItems: tabs,
+        tabViews: [
+          new XSMyPage(),
+          new XSMyPage(),
+          new XSMyPage(),
+          new XSMyPage(),
+          new XSMyPage(),
         ],
+        backgroundColor: XSColors.primarySwatch,
+        indicatorColor: XSColors.white,
+        // title: XSTitleBar(
+        //   XSLocalizations.of(context).currentLocalized.app_name,
+        //   iconData: XSICons.MAIN_SEARCH,
+        //   needRightLocalIcon: true,
+        //   onPressed: () {
+        //     // NavigatorUtils.goSearchPage(context);
+        //   },
+        // ),
       ),
     );
-  }
-}
-
-String successData = "";
-
-class returnData extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return returnDataState();
-  }
-}
-
-class returnDataState extends State<returnData> {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    AlertDialog dialog = new AlertDialog(
-      content: new Text(
-        successData,
-        style: new TextStyle(fontSize: 30.0, color: Colors.red),
-      ),
-    );
-    return dialog;
   }
 }
