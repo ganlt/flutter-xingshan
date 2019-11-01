@@ -47,8 +47,6 @@ class XSColors {
 
 ///文本样式
 class XSConstant {
-  static const String app_default_share_url =
-      "https://github.com/CarGuo/XSGithubAppFlutter";
 
   static const lagerTextSize = 30.0;
   static const bigTextSize = 23.0;
@@ -214,8 +212,6 @@ class XSICons {
 
   static const String DEFAULT_USER_ICON = 'static/images/logo.png';
   static const String DEFAULT_IMAGE = 'static/images/default_img.png';
-  static const String DEFAULT_REMOTE_PIC =
-      'https://raw.githubusercontent.com/CarGuo/XSGithubAppFlutter/master/static/images/logo.png';
 
   static const IconData HOME =
       const IconData(0xe624, fontFamily: XSICons.FONT_FAMILY);
@@ -224,56 +220,16 @@ class XSICons {
   static const IconData SEARCH =
       const IconData(0xe61c, fontFamily: XSICons.FONT_FAMILY);
 
-  static const IconData MAIN_DT =
+  static const IconData HOME_WALK =
       const IconData(0xe684, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData MAIN_QS =
+  static const IconData HOME_MESSAGE =
       const IconData(0xe818, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData MAIN_MY =
+  static const IconData HOME_PROJECT =
       const IconData(0xe6d0, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData MAIN_SEARCH =
-      const IconData(0xe61c, fontFamily: XSICons.FONT_FAMILY);
-
-  static const IconData LOGIN_USER =
-      const IconData(0xe666, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData LOGIN_PW =
-      const IconData(0xe60e, fontFamily: XSICons.FONT_FAMILY);
-
-  static const IconData REPOS_ITEM_USER =
-      const IconData(0xe63e, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData REPOS_ITEM_STAR =
-      const IconData(0xe643, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData REPOS_ITEM_FORK =
-      const IconData(0xe67e, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData REPOS_ITEM_ISSUE =
-      const IconData(0xe661, fontFamily: XSICons.FONT_FAMILY);
-
-  static const IconData REPOS_ITEM_STARED =
-      const IconData(0xe698, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData REPOS_ITEM_WATCH =
-      const IconData(0xe681, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData REPOS_ITEM_WATCHED =
-      const IconData(0xe629, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData REPOS_ITEM_DIR = Icons.folder;
-  static const IconData REPOS_ITEM_FILE =
-      const IconData(0xea77, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData REPOS_ITEM_NEXT =
-      const IconData(0xe610, fontFamily: XSICons.FONT_FAMILY);
-
-  static const IconData USER_ITEM_COMPANY =
-      const IconData(0xe63e, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData USER_ITEM_LOCATION =
-      const IconData(0xe7e6, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData USER_ITEM_LINK =
-      const IconData(0xe670, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData USER_NOTIFY =
-      const IconData(0xe600, fontFamily: XSICons.FONT_FAMILY);
-
-  static const IconData ISSUE_ITEM_ISSUE =
-      const IconData(0xe661, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData ISSUE_ITEM_COMMENT =
-      const IconData(0xe6ba, fontFamily: XSICons.FONT_FAMILY);
-  static const IconData ISSUE_ITEM_ADD =
-      const IconData(0xe662, fontFamily: XSICons.FONT_FAMILY);
+  static const IconData HOME_FOUND =
+      const IconData(0xe6d0, fontFamily: XSICons.FONT_FAMILY);
+  static const IconData HOME_MY =
+      const IconData(0xe6d0, fontFamily: XSICons.FONT_FAMILY);
 
   static const IconData ISSUE_EDIT_H1 = Icons.filter_1;
   static const IconData ISSUE_EDIT_H2 = Icons.filter_2;

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xingshan/common/style/style.dart';
 
 ///支持顶部和顶部的TabBar控件
 ///配合AutomaticKeepAliveClientMixin可以keep住
@@ -117,6 +118,11 @@ class _XSTabBarState extends State<XSTabBarWidget>
               //TabBar导航标签，底部导航放到Scaffold的bottomNavigationBar中
               controller: _tabController, //配置控制器
               tabs: widget.tabItems,
+              labelColor: XSColors.white,
+              labelPadding: EdgeInsets.only(top: 6, bottom: 3),
+              labelStyle: TextStyle(
+                fontSize: 10,
+              ),
               indicatorColor: _indicatorColor,
               onTap: (index) {
                 _onPageChanged?.call(index);
