@@ -6,8 +6,6 @@ import 'package:xingshan/common/localization/default_localizations.dart';
 
 /*
  * 多语言代理
- * Created by guoshuyu
- * Date: 2018-08-15
  */
 class XSLocalizationsDelegate extends LocalizationsDelegate<XSLocalizations> {
 
