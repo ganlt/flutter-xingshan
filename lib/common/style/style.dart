@@ -29,7 +29,9 @@ class XSColors {
 
   static const Color primaryTabValue = Color(0xFFb2b2b2);
 
-  static const Color primaryValue = Color(0xFF24292E);
+  static const Color primaryLineValue = Color(0xFFF5F7F7);
+
+  static const Color primaryValue = Color(0xFF17C5B3);
   static const Color primaryLightValue = Color(0xFF42464b);
   static const Color primaryDarkValue = Color(0xFF121917);
 
@@ -40,6 +42,7 @@ class XSColors {
   static const Color actionBlue = Color(0xff267aff);
   static const Color subTextColor = Color(0xff959595);
   static const Color subLightTextColor = Color(0xffc4c4c4);
+  static const Color dividerColor = Color(0xffd8d8d8);
 
   static const Color mainBackgroundColor = miWhite;
 
@@ -212,6 +215,8 @@ class XSConstant {
 class XSICons {
   static const String FONT_FAMILY = 'wxcIconFont';
 
+  static const BACK_BUTTON = "assets/images/icons/back_btn.png";
+
   static const String DEFAULT_USER_ICON = 'static/images/logo.png';
   static const String DEFAULT_IMAGE = 'static/images/default_img.png';
 
@@ -231,25 +236,41 @@ class XSICons {
   static const IconData SEARCH =
       const IconData(0xe61c, fontFamily: XSICons.FONT_FAMILY);
 
+  // var TAB_ICONS = Map();
+  // void aaa(){
+  //   TAB_ICONS.putIfAbsent("TAB_WALK", ()=>'assets/images/icons/tab_walk.png');
+  //   TAB_ICONS.putIfAbsent("TAB_WALK", ()=>'assets/images/icons/tab_walk.png');
+  //   TAB_ICONS.putIfAbsent("TAB_WALK", ()=>'assets/images/icons/tab_walk.png');
+  //   TAB_ICONS.putIfAbsent("TAB_WALK", ()=>'assets/images/icons/tab_walk.png');
+  //   TAB_ICONS.putIfAbsent("TAB_WALK", ()=>'assets/images/icons/tab_walk.png');
+  //   TAB_ICONS.putIfAbsent("TAB_WALK_SELECTED", ()=>'assets/images/icons/tab_walk_selected.png');
+  //   TAB_ICONS.putIfAbsent("TAB_WALK_SELECTED", ()=>'assets/images/icons/tab_walk_selected.png');
+  //   TAB_ICONS.putIfAbsent("TAB_WALK_SELECTED", ()=>'assets/images/icons/tab_walk_selected.png');
+  //   TAB_ICONS.putIfAbsent("TAB_WALK_SELECTED", ()=>'assets/images/icons/tab_walk_selected.png');
+  //   TAB_ICONS.putIfAbsent("TAB_WALK_SELECTED", ()=>'assets/images/icons/tab_walk_selected.png');
+  // }
   static const String TAB_WALK = 'assets/images/icons/tab_walk.png';
   static const String TAB_MESSAGE = 'assets/images/icons/tab_message.png';
   static const String TAB_PROJECT = 'assets/images/icons/tab_project.png';
   static const String TAB_FOUND = 'assets/images/icons/tab_found.png';
   static const String TAB_MY = 'assets/images/icons/tab_my.png';
 
-  static const IconData ISSUE_EDIT_H1 = Icons.filter_1;
-  static const IconData ISSUE_EDIT_H2 = Icons.filter_2;
-  static const IconData ISSUE_EDIT_H3 = Icons.filter_3;
-  static const IconData ISSUE_EDIT_BOLD = Icons.format_bold;
-  static const IconData ISSUE_EDIT_ITALIC = Icons.format_italic;
-  static const IconData ISSUE_EDIT_QUOTE = Icons.format_quote;
-  static const IconData ISSUE_EDIT_CODE = Icons.format_shapes;
-  static const IconData ISSUE_EDIT_LINK = Icons.insert_link;
+  // static const String TAB_WALK_Tapped = 'assets/images/icons/tab_walk_selected.png';
+  // static const String TAB_MESSAGE_Tapped = 'assets/images/icons/tab_message_selected.png';
+  // static const String TAB_PROJECT_Tapped = 'assets/images/icons/tab_project_selected.png';
+  // static const String TAB_FOUND_Tapped = 'assets/images/icons/tab_found_selected.png';
+  // static const String TAB_MY_Tapped = 'assets/images/icons/tab_my_selected.png';
 
-  static const IconData NOTIFY_ALL_READ =
-      const IconData(0xe62f, fontFamily: XSICons.FONT_FAMILY);
+  static const String FOUND_DYNAMIC = 'assets/images/icons/found_dynamic.png';
+  static const String FOUND_TASK_LIST = 'assets/images/icons/found_task_list.png';
+  static const String FOUND_TASK = 'assets/images/icons/found_task.png';
+  static const String FOUND_SQUARE = 'assets/images/icons/found_square.png';
+  static const String FOUND_TEAM = 'assets/images/icons/found_team.png';
 
-  static const IconData PUSH_ITEM_EDIT = Icons.mode_edit;
-  static const IconData PUSH_ITEM_ADD = Icons.add_box;
-  static const IconData PUSH_ITEM_MIN = Icons.indeterminate_check_box;
+  static const String MY_EXPAND = 'assets/images/icons/my_expand.png';
+
+  static const IconData LOGIN_USER =
+      const IconData(0xe666, fontFamily: XSICons.FONT_FAMILY);
+  static const IconData LOGIN_PW =
+      const IconData(0xe60e, fontFamily: XSICons.FONT_FAMILY);
 }
