@@ -34,6 +34,8 @@ dependencies:
   fluttertoast: ^3.1.3
   android_intent: 0.3.0
   flutter_spinkit: ^4.0.0
+  shared_preferences: 0.5.3+4
+  rxdart: ^0.22.3
 
 dev_dependencies:
   flutter_test:
@@ -65,12 +67,25 @@ flutter:
     - assets/images/icons/my_my_dynamic.png
     - assets/images/icons/my_my_setting.png
 
+    - assets/images/icons/back_btn.png
+
     - assets/images/icons/tab_walk.png
     - assets/images/icons/tab_message.png
     - assets/images/icons/tab_project.png
     - assets/images/icons/tab_found.png
     - assets/images/icons/tab_my.png
 
+    - assets/images/icons/my_expand.png
+
+    - assets/images/icons/found_dynamic.png
+    - assets/images/icons/found_square.png
+    - assets/images/icons/found_task_list.png
+    - assets/images/icons/found_task.png
+    - assets/images/icons/found_team.png
+    
+    - assets/images/yyqx.jpg
+    - assets/images/project.png
+    - assets/images/project_02.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
