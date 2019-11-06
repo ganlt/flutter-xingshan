@@ -54,7 +54,7 @@ class _XSPullLoadWidgetState extends State<XSPullLoadWidget> {
           _scrollController.notifyListeners();
         });
       } catch (e) {
-        print(e);
+        // print(e);
       }
     });
 
