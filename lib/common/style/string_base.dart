@@ -18,4 +18,17 @@ abstract class XSStringBase {
 
   String app_empty;
   String load_more_text;
+
+  String login_hint_message_text;
+  String user_service_agreement;
+  String login_username_hint_text;
+  String get_validate_code_text;
+  String login_password_hint_text;
+  String login_text;
+  String third_login_text;
+  String password_login_text;
+  String switch_language;
+  String home_language_default;
+  String home_language_zh;
+  String home_language_en;
 }

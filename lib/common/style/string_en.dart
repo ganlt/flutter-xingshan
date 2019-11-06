@@ -35,4 +35,29 @@ class XSStringEn extends XSStringBase {
   String app_empty = "empty";
   @override
   String load_more_text = "load more";
+
+  @override
+  String login_hint_message_text = "login hint message text";
+  @override
+  String user_service_agreement = "user service agreement";
+  @override
+  String login_username_hint_text = "username";
+  @override
+  String login_password_hint_text = "password";
+  @override
+  String login_text = "login";
+  @override
+  String third_login_text = "third login";
+  @override
+  String password_login_text = " login by pw";
+  @override
+  String get_validate_code_text = "get validate code";
+  @override
+  String switch_language = "switch language";
+  @override
+  String home_language_default = "default";
+  @override
+  String home_language_zh = "中文（简体）";
+  @override
+  String home_language_en = "English";
 }

@@ -35,4 +35,29 @@ class XSStringZh extends XSStringBase {
   String app_empty = "数据为空";
   @override
   String load_more_text = "加载更多";
+
+  @override
+  String login_hint_message_text = "温馨提示：未注册手机号码，登录时将自动注册，且代表您同意";
+  @override
+  String user_service_agreement = "用户服务协议";
+  @override
+  String login_username_hint_text = "手机号";
+  @override
+  String login_password_hint_text = "密码";
+  @override
+  String login_text = "登录";
+  @override
+  String third_login_text = "第三方登录";
+  @override
+  String password_login_text = "密码登录";
+  @override
+  String get_validate_code_text = "获取验证码";
+  @override
+  String switch_language = "切换语言";
+  @override
+  String home_language_default = "默认语言";
+  @override
+  String home_language_zh = "中文（简体）";
+  @override
+  String home_language_en = "English";
 }
