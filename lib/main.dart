@@ -17,7 +17,7 @@ import 'package:xingshan/common/net/code.dart';
 
 import 'package:xingshan/page/welcome_page.dart';
 import 'package:xingshan/page/home/home_page.dart';
-import 'package:xingshan/page/my/my_page.dart';
+import 'package:xingshan/page/login/login_page.dart';
 
 void main()  {
   runApp(MyApp());
@@ -57,6 +57,10 @@ class MyApp extends StatelessWidget {
             XSHomePage.sName: (context) {
               ///通过 Localizations.override 包裹一层，
               return new XSHomePage();
+            },
+            LoginPage.sName: (context) {
+              return new XSLocalizations(
+                  child: NavigatorUtils.pageContainer(new LoginPage()));
             },
           },
           // home: Homes(),

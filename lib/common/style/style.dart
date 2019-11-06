@@ -267,6 +267,10 @@ class XSICons {
   static const String FOUND_SQUARE = 'assets/images/icons/found_square.png';
   static const String FOUND_TEAM = 'assets/images/icons/found_team.png';
 
+  static const String QQ_LOGIN = 'assets/images/icons/qq_login.png';
+  static const String WECHAT_LOGIN = 'assets/images/icons/weixin_login.png';
+  static const String WEIBO_LOGIN = 'assets/images/icons/weibo_login.png';
+
   static const String MY_EXPAND = 'assets/images/icons/my_expand.png';
 
   static const IconData LOGIN_USER =
