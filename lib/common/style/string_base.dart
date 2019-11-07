@@ -24,9 +24,11 @@ abstract class XSStringBase {
   String login_username_hint_text;
   String get_validate_code_text;
   String login_password_hint_text;
+  String pw_login_username_hint_text;
   String login_text;
   String third_login_text;
   String password_login_text;
+  String forget_password_text;
   String switch_language;
   String home_language_default;
   String home_language_zh;

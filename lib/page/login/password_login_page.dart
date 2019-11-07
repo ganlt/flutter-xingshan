@@ -5,7 +5,6 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:xingshan/common/config/config.dart';
 import 'package:xingshan/common/local/local_storage.dart';
-import 'package:xingshan/common/utils/navigator_utils.dart';
 import 'package:xingshan/redux/state.dart';
 // import 'package:xingshan/redux/login_redux.dart';
 import 'package:xingshan/common/style/style.dart';
@@ -17,16 +16,16 @@ import 'package:xingshan/widget/input_phone_widget.dart';
 import 'package:xingshan/common/localization/default_localizations.dart';
 
 //登录页
-class LoginPage extends StatefulWidget {
-  static final String sName = "login";
+class PwLoginPage extends StatefulWidget {
+  static final String sName = "password_login";
 
   @override
   State createState() {
-    return new _LoginPageState();
+    return new _PwLoginPageState();
   }
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _PwLoginPageState extends State<PwLoginPage> {
   var _userName = "";
 
   var _password = "";
@@ -34,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController userController = new TextEditingController();
   final TextEditingController pwController = new TextEditingController();
 
-  _LoginPageState() : super();
+  _PwLoginPageState() : super();
 
   @override
   void initState() {
@@ -61,22 +60,12 @@ class _LoginPageState extends State<LoginPage> {
         },
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: Theme.of(context).primaryColor,
             centerTitle: true,
             title: Text(
-              XSLocalizations.of(context).currentLocalized.login_text,
+              XSLocalizations.of(context).currentLocalized.password_login_text,
               style: TextStyle(color: XSColors.white,fontSize: 19,),
             ),
-            actions: <Widget>[
-              new MaterialButton(
-                child: Text(
-                  CommonUtils.getLocale(context).password_login_text,
-                  style: TextStyle(color: XSColors.white,fontSize: 16,),
-                ),
-                onPressed: (){
-                  NavigatorUtils.goPasswordLogin(context);
-                },
-              )
-            ],
           ),
           body: new Container(
             color: XSColors.white,
@@ -87,9 +76,9 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     children: <Widget>[
                       new Padding(padding: new EdgeInsets.all(5.0)),
-                      new XSInputPhoneWidget(
+                      new XSInputWidget(
                         hintText: CommonUtils.getLocale(context)
-                            .login_username_hint_text,
+                            .pw_login_username_hint_text,
                         onChanged: (String value) {
                           _userName = value;
                         },
@@ -106,20 +95,21 @@ class _LoginPageState extends State<LoginPage> {
                         controller: pwController,
                       ),
                       new Padding(padding: new EdgeInsets.all(3.5)),
-                      new Padding (
-                        padding: EdgeInsets.fromLTRB(15.0, 0, 15.0, 0),
-                        child: Column(
-                          children: <Widget>[
-                            new Text(
-                              CommonUtils.getLocale(context).login_hint_message_text,
-                              style: TextStyle(color: XSColors.subLightTextColor,fontSize: 12,),
+                      new Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: <Widget>[
+                          new MaterialButton(
+                            child: Text(
+                              CommonUtils.getLocale(context).forget_password_text,
+                              style: TextStyle(
+                                color: Theme.of(context).primaryColor
+                              )
                             ),
-                            new Text(
-                              CommonUtils.getLocale(context).user_service_agreement,
-                              style: TextStyle(color: Theme.of(context).primaryColor, fontSize: 12,),
-                            )
-                          ],
-                        ),
+                            onPressed: (){
+
+                            },
+                          )
+                        ],
                       ),
                       new Padding(padding: new EdgeInsets.all(40)),
                       new Padding(

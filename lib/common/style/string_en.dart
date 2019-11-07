@@ -53,6 +53,10 @@ class XSStringEn extends XSStringBase {
   @override
   String get_validate_code_text = "get validate code";
   @override
+  String pw_login_username_hint_text = "phone number/email/username";
+  @override
+  String forget_password_text = "forgot password";
+  @override
   String switch_language = "switch language";
   @override
   String home_language_default = "default";

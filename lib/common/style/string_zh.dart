@@ -39,7 +39,7 @@ class XSStringZh extends XSStringBase {
   @override
   String login_hint_message_text = "温馨提示：未注册手机号码，登录时将自动注册，且代表您同意";
   @override
-  String user_service_agreement = "用户服务协议";
+  String user_service_agreement = "《用户服务协议》";
   @override
   String login_username_hint_text = "手机号";
   @override
@@ -52,6 +52,10 @@ class XSStringZh extends XSStringBase {
   String password_login_text = "密码登录";
   @override
   String get_validate_code_text = "获取验证码";
+  @override
+  String pw_login_username_hint_text = "手机号/邮箱/用户名";
+  @override
+  String forget_password_text = "忘记密码";
   @override
   String switch_language = "切换语言";
   @override

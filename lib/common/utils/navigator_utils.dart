@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:xingshan/page/home/home_page.dart';
+import 'package:xingshan/page/login/login_page.dart';
+import 'package:xingshan/page/login/password_login_page.dart';
 
 // 导航栏
 class NavigatorUtils {
@@ -15,7 +17,14 @@ class NavigatorUtils {
   static pushNamed(BuildContext context, String routeName) {
     Navigator.pushNamed(context, routeName);
   }
+  
+  static goLogin(BuildContext context) {
+    NavigatorRouter(context, new LoginPage());
+  }
 
+  static goPasswordLogin(BuildContext context) {
+    NavigatorRouter(context, new PwLoginPage());
+  }
   ///主页
   static goHome(BuildContext context) {
     Navigator.pushReplacementNamed(context, XSHomePage.sName);
@@ -38,21 +47,21 @@ class NavigatorUtils {
   }
 
   ///弹出 dialog
-  // static Future<T> showXSDialog<T>({
-  //   @required BuildContext context,
-  //   bool barrierDismissible = true,
-  //   WidgetBuilder builder,
-  // }) {
-  //   return showDialog<T>(
-  //       context: context,
-  //       barrierDismissible: barrierDismissible,
-  //       builder: (context) {
-  //         return MediaQuery(
+  static Future<T> showXSDialog<T>({
+    @required BuildContext context,
+    bool barrierDismissible = true,
+    WidgetBuilder builder,
+  }) {
+    return showDialog<T>(
+        context: context,
+        barrierDismissible: barrierDismissible,
+        builder: (context) {
+          return MediaQuery(
 
-  //             ///不受系统字体缩放影响
-  //             data: MediaQueryData.fromWindow(WidgetsBinding.instance.window)
-  //                 .copyWith(textScaleFactor: 1),
-  //             child: new SafeArea(child: builder(context)));
-  //       });
-  // }
+              ///不受系统字体缩放影响
+              data: MediaQueryData.fromWindow(WidgetsBinding.instance.window)
+                  .copyWith(textScaleFactor: 1),
+              child: new SafeArea(child: builder(context)));
+        });
+  }
 }

@@ -76,14 +76,6 @@ class XSHomePage extends StatelessWidget {
         ],
         backgroundColor: XSColors.primarySwatch,
         indicatorColor: XSColors.white,
-        // title: XSTitleBar(
-        //   XSLocalizations.of(context).currentLocalized.app_name,
-        //   iconData: XSICons.MAIN_SEARCH,
-        //   needRightLocalIcon: true,
-        //   onPressed: () {
-        //     // NavigatorUtils.goSearchPage(context);
-        //   },
-        // ),
       ),
     );
   }
