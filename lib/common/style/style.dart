@@ -34,6 +34,7 @@ class XSColors {
   static const Color primaryValue = Color(0xFF17C5B3);
   static const Color primaryLightValue = Color(0xFF42464b);
   static const Color primaryDarkValue = Color(0xFF121917);
+  static const Color primaryBorderValue = Color(0xffdbdbdb);
 
   static const Color cardWhite = Color(0xFFFFFFFF);
   static const Color textWhite = Color(0xFFFFFFFF);
@@ -43,6 +44,9 @@ class XSColors {
   static const Color subTextColor = Color(0xff959595);
   static const Color subLightTextColor = Color(0xffc4c4c4);
   static const Color dividerColor = Color(0xffd8d8d8);
+  static const Color moneyMainColor = Color(0xffEF7363);
+  static const Color greyTextColor = Color(0xff808080);
+  static const Color orangeTextColor = Color(0xfff5a623);
 
   static const Color mainBackgroundColor = miWhite;
 
@@ -236,19 +240,6 @@ class XSICons {
   static const IconData SEARCH =
       const IconData(0xe61c, fontFamily: XSICons.FONT_FAMILY);
 
-  // var TAB_ICONS = Map();
-  // void aaa(){
-  //   TAB_ICONS.putIfAbsent("TAB_WALK", ()=>'assets/images/icons/tab_walk.png');
-  //   TAB_ICONS.putIfAbsent("TAB_WALK", ()=>'assets/images/icons/tab_walk.png');
-  //   TAB_ICONS.putIfAbsent("TAB_WALK", ()=>'assets/images/icons/tab_walk.png');
-  //   TAB_ICONS.putIfAbsent("TAB_WALK", ()=>'assets/images/icons/tab_walk.png');
-  //   TAB_ICONS.putIfAbsent("TAB_WALK", ()=>'assets/images/icons/tab_walk.png');
-  //   TAB_ICONS.putIfAbsent("TAB_WALK_SELECTED", ()=>'assets/images/icons/tab_walk_selected.png');
-  //   TAB_ICONS.putIfAbsent("TAB_WALK_SELECTED", ()=>'assets/images/icons/tab_walk_selected.png');
-  //   TAB_ICONS.putIfAbsent("TAB_WALK_SELECTED", ()=>'assets/images/icons/tab_walk_selected.png');
-  //   TAB_ICONS.putIfAbsent("TAB_WALK_SELECTED", ()=>'assets/images/icons/tab_walk_selected.png');
-  //   TAB_ICONS.putIfAbsent("TAB_WALK_SELECTED", ()=>'assets/images/icons/tab_walk_selected.png');
-  // }
   static const String TAB_WALK = 'assets/images/icons/tab_walk.png';
   static const String TAB_MESSAGE = 'assets/images/icons/tab_message.png';
   static const String TAB_PROJECT = 'assets/images/icons/tab_project.png';
@@ -272,6 +263,9 @@ class XSICons {
   static const String WEIBO_LOGIN = 'assets/images/icons/weibo_login.png';
 
   static const String MY_EXPAND = 'assets/images/icons/my_expand.png';
+
+  static const String PROJECT_HEART_GREY = 'assets/images/icons/project_heart_grey.png';
+  static const String PROJECT_COMMENT = 'assets/images/icons/project_comment.png';
 
   static const IconData LOGIN_USER =
       const IconData(0xe666, fontFamily: XSICons.FONT_FAMILY);

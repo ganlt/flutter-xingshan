@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:xingshan/page/home/home_page.dart';
 import 'package:xingshan/page/login/login_page.dart';
 import 'package:xingshan/page/login/password_login_page.dart';
+import 'package:xingshan/page/project/project_detail_page.dart';
 
 // 导航栏
 class NavigatorUtils {
@@ -63,5 +64,12 @@ class NavigatorUtils {
                   .copyWith(textScaleFactor: 1),
               child: new SafeArea(child: builder(context)));
         });
+  }
+  
+  static goProjectDetailPage(
+    BuildContext context,
+  ) {
+    NavigatorRouter(context,
+     new XSProjectDetailPage());
   }
 }

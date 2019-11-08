@@ -90,6 +90,9 @@ flutter:
     - assets/images/icons/qq_login.png
     - assets/images/icons/weibo_login.png
     - assets/images/icons/weixin_login.png
+
+    - assets/images/icons/project_heart_grey.png
+    - assets/images/icons/project_comment.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

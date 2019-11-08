@@ -17,7 +17,6 @@ class _XSProjectPageState extends State<XSProjectPage> {
 
   _renderItem(image, title, current, other, target, des) {
     return FlatButton(
-      // highlightElevation: 
       child: Container(
         padding: EdgeInsets.fromLTRB(10.0, 7.0, 10.0, 7.0),
         child: Column(
@@ -180,7 +179,7 @@ class _XSProjectPageState extends State<XSProjectPage> {
         ),
       ),
       onPressed: () {
-        // NavigatorUtils.goProject();
+        NavigatorUtils.goProjectDetailPage(context);
       },
     );
   }
