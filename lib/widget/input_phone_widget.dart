@@ -80,24 +80,6 @@ Function() normalBtn = (){
     },
   );
 };
-
-// Widget disabledBtn(){
-//   return FlatButton(
-//     color: XSColors.dividerColor,
-//     child: Padding(
-//       padding: EdgeInsets.fromLTRB(0, 13.0, 0, 13.0),
-//       child: Text(
-//         _btnText,
-//         style: TextStyle(
-//           fontSize: 14,
-//           color: XSColors.white,
-//         ),
-//       ),
-//     ),
-//     onPressed: () {
-//     },
-//   );
-// }
 /// State for [XSInputPhoneWidget] widgets.
 class _XSInputPhoneWidgetState extends State<XSInputPhoneWidget> {
   _XSInputPhoneWidgetState() : super();
