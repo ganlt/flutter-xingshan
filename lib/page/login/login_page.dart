@@ -161,16 +161,16 @@ class _LoginPageState extends State<LoginPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           new Image(
-                            image: new AssetImage(XSICons.WECHAT_LOGIN),
+                            image: new AssetImage(XSICons.WECHAT_ICON),
                           ),
                           new Padding(
                             padding: EdgeInsets.only(left: 40.0,right: 40.0),
                             child: new Image(
-                              image: new AssetImage(XSICons.QQ_LOGIN),
+                              image: new AssetImage(XSICons.QQ_ICON),
                             ),
                           ),
                           new Image(
-                            image: new AssetImage(XSICons.WEIBO_LOGIN),
+                            image: new AssetImage(XSICons.WEIBO_ICON),
                           ),
                         ],
                       ),

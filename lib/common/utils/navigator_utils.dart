@@ -6,6 +6,10 @@ import 'package:xingshan/page/home/home_page.dart';
 import 'package:xingshan/page/login/login_page.dart';
 import 'package:xingshan/page/login/password_login_page.dart';
 import 'package:xingshan/page/project/project_detail_page.dart';
+import 'package:xingshan/page/project/pay_page.dart';
+import 'package:xingshan/page/project/pay_success_page.dart';
+import 'package:xingshan/page/project/confirm_pay_page.dart';
+import 'package:xingshan/page/project/pay_success_share_page.dart';
 
 // 导航栏
 class NavigatorUtils {
@@ -65,11 +69,28 @@ class NavigatorUtils {
               child: new SafeArea(child: builder(context)));
         });
   }
-  
+  // 项目详情页
   static goProjectDetailPage(
     BuildContext context,
   ) {
     NavigatorRouter(context,
      new XSProjectDetailPage());
+  }
+  // 我要出钱页
+  static goPayPage(
+    BuildContext context,
+  ) {
+    NavigatorRouter(context,
+      new XSPayPage()
+    );
+  }
+  static goPaySuccess(BuildContext context) {
+    NavigatorRouter(context, new XSPaySuccessPage());
+  }
+  static goConfirmPayPage(BuildContext context) {
+    NavigatorRouter(context, new XSConfirmPayPage());
+  }
+  static goPaySuccessShare(BuildContext context) {
+    NavigatorRouter(context, new XSPaySuccessSharePage());
   }
 }

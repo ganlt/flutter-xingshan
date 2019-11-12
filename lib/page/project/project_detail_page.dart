@@ -417,7 +417,9 @@ class _XSProjectDetailPageState extends State<XSProjectDetailPage> {
                           child: Text('我要出钱',style: TextStyle(color: XSColors.white,),),
                           color: XSColors.orangeTextColor,
                           padding: EdgeInsets.fromLTRB(15.0, 14.0, 15.0, 14.0),
-                          onPressed: (){},
+                          onPressed: (){
+                            NavigatorUtils.goPayPage(context);
+                          },
                         ),
                         Padding(padding: EdgeInsets.all(10.0),),
                         FlatButton(

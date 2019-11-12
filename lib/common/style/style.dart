@@ -47,6 +47,7 @@ class XSColors {
   static const Color moneyMainColor = Color(0xffEF7363);
   static const Color greyTextColor = Color(0xff808080);
   static const Color orangeTextColor = Color(0xfff5a623);
+  static const Color redTextColor = Color(0xffEB5340);
 
   static const Color mainBackgroundColor = miWhite;
 
@@ -258,14 +259,15 @@ class XSICons {
   static const String FOUND_SQUARE = 'assets/images/icons/found_square.png';
   static const String FOUND_TEAM = 'assets/images/icons/found_team.png';
 
-  static const String QQ_LOGIN = 'assets/images/icons/qq_login.png';
-  static const String WECHAT_LOGIN = 'assets/images/icons/weixin_login.png';
-  static const String WEIBO_LOGIN = 'assets/images/icons/weibo_login.png';
+  static const String QQ_ICON = 'assets/images/icons/qq_login.png';
+  static const String WECHAT_ICON = 'assets/images/icons/weixin_login.png';
+  static const String WEIBO_ICON = 'assets/images/icons/weibo_login.png';
 
   static const String MY_EXPAND = 'assets/images/icons/my_expand.png';
 
   static const String PROJECT_HEART_GREY = 'assets/images/icons/project_heart_grey.png';
   static const String PROJECT_COMMENT = 'assets/images/icons/project_comment.png';
+  static const String PROJECT_BACKGROUND = 'assets/images/icons/project_detail_background.png';
 
   static const IconData LOGIN_USER =
       const IconData(0xe666, fontFamily: XSICons.FONT_FAMILY);
