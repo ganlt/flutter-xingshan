@@ -48,7 +48,10 @@ class XSColors {
   static const Color greyTextColor = Color(0xff808080);
   static const Color orangeTextColor = Color(0xfff5a623);
   static const Color redTextColor = Color(0xffEB5340);
-
+  static const Color fixedTabColor = Color(0xffeeeeee);
+  static const Color pinkColor = Color(0xfff46690);
+  static const Color blueColor = Color(0xff669bec);
+  
   static const Color mainBackgroundColor = miWhite;
 
   static const Color mainTextColor = primaryDarkValue;
@@ -218,6 +221,7 @@ class XSConstant {
 }
 
 class XSICons {
+  static const String AVATAR = 'assets/images/avatar.jpg';
   static const String FONT_FAMILY = 'wxcIconFont';
 
   static const BACK_BUTTON = "assets/images/icons/back_btn.png";
@@ -258,6 +262,11 @@ class XSICons {
   static const String FOUND_TASK = 'assets/images/icons/found_task.png';
   static const String FOUND_SQUARE = 'assets/images/icons/found_square.png';
   static const String FOUND_TEAM = 'assets/images/icons/found_team.png';
+
+  static const String DIALOG_CLOSE = 'assets/images/icons/found/found_dialog_close_btn.png';
+  static const String FOUND_TASKLIST_FILTRATE = 'assets/images/icons/found/found_tasklist_filtrate.png';
+  static const String SHARE_BUTTON = 'assets/images/icons/found/found_task_share.png';
+  static const String COMMENT_BUTTON = 'assets/images/icons/found/found_dynamic_comment.png';
 
   static const String QQ_ICON = 'assets/images/icons/qq_login.png';
   static const String WECHAT_ICON = 'assets/images/icons/weixin_login.png';

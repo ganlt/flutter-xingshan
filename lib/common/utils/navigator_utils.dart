@@ -11,6 +11,9 @@ import 'package:xingshan/page/project/pay_success_page.dart';
 import 'package:xingshan/page/project/confirm_pay_page.dart';
 import 'package:xingshan/page/project/pay_success_share_page.dart';
 
+import 'package:xingshan/page/found/task/task_detail_page.dart';
+import 'package:xingshan/page/found/dynamic/dynamic_detail_page.dart';
+
 // 导航栏
 class NavigatorUtils {
   ///替换
@@ -93,4 +96,19 @@ class NavigatorUtils {
   static goPaySuccessShare(BuildContext context) {
     NavigatorRouter(context, new XSPaySuccessSharePage());
   }
+  // 任务详情页
+  static goTaskDetailPage(
+    BuildContext context,
+  ) {
+    NavigatorRouter(context,
+     new XSTaskDetailPage());
+  }
+  // 动态详情页
+  static goDynamicDetailPage(
+    BuildContext context,
+  ) {
+    NavigatorRouter(context,
+     new XSDynamicDetailPage());
+  }
+
 }

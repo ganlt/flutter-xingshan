@@ -25,8 +25,6 @@ class _XSProjectPageState extends State<XSProjectPage> {
               padding: EdgeInsets.only(bottom: 10.0),
               child: Image(
                 image: new AssetImage(image),
-                // width: 345,
-                // height: 194,
               ),
             ),
             Padding(

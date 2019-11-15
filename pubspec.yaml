@@ -58,6 +58,7 @@ flutter:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
   assets:
+    # - assets/
     - assets/images/avatar.jpg
     - assets/images/icons/my_my_task.png
     - assets/images/icons/my_my_track.png
@@ -84,6 +85,7 @@ flutter:
     - assets/images/icons/found_team.png
     
     - assets/images/yyqx.jpg
+    - assets/images/yyyy.jpg
     - assets/images/project.png
     - assets/images/project_02.png
 
@@ -94,6 +96,11 @@ flutter:
     - assets/images/icons/project_heart_grey.png
     - assets/images/icons/project_comment.png
     - assets/images/icons/project_detail_background.png
+
+    - assets/images/icons/found/found_tasklist_filtrate.png
+    - assets/images/icons/found/found_dialog_close_btn.png
+    - assets/images/icons/found/found_task_share.png
+    - assets/images/icons/found/found_dynamic_comment.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:xingshan/common/style/style.dart';
+import 'package:xingshan/common/utils/navigator_utils.dart';
+import 'package:xingshan/page/found/task/task_home_page.dart';
+import 'package:xingshan/page/found/dynamic/dynamic_page.dart';
+import 'package:xingshan/page/found/square/square_page.dart';
+import 'package:xingshan/page/found/team/team_page.dart';
 
 class XSFoundPage extends StatefulWidget {
   XSFoundPage({Key key, this.title}): super(key: key);
@@ -12,7 +17,7 @@ class XSFoundPage extends StatefulWidget {
 
 class _XSFoundPageState extends State<XSFoundPage> {
 
-   _renderItem(image, text, index) {
+   _renderItem(image, text, index, widget) {
     var borderWidth = index == 1 || index == 3 ? 9.0 : 3.0;
 
     return new Container(
@@ -68,7 +73,7 @@ class _XSFoundPageState extends State<XSFoundPage> {
           ],
         ),
         onPressed: () {
-          // NavigatorUtils.goMyPage(index);
+          NavigatorUtils.NavigatorRouter(context, widget);
         },
       ),
     );
@@ -79,10 +84,10 @@ class _XSFoundPageState extends State<XSFoundPage> {
   Widget build(BuildContext context) {
     
     List<Widget> _items = [
-      _renderItem(XSICons.FOUND_TASK, '任务', 1),
-      _renderItem(XSICons.FOUND_DYNAMIC, '动态', 2),
-      _renderItem(XSICons.FOUND_TEAM, '团队', 3),
-      _renderItem(XSICons.FOUND_SQUARE, '广场', 4),
+      _renderItem(XSICons.FOUND_TASK, '任务', 1, new XSTaskListPage()),
+      _renderItem(XSICons.FOUND_DYNAMIC, '动态', 2, new XSDynamicPage()),
+      _renderItem(XSICons.FOUND_TEAM, '团队', 3, new XSTeamPage()),
+      _renderItem(XSICons.FOUND_SQUARE, '广场', 4, new XSSquarePage()),
     ];
 
     return Scaffold(
