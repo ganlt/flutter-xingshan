@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:xingshan/common/style/style.dart';
 import 'package:xingshan/common/utils/navigator_utils.dart';
 
+import 'package:xingshan/page/my/my_xs_track.dart';
+import 'package:xingshan/page/my/my_box.dart';
+import 'package:xingshan/page/my/my_dynamic_page.dart';
+import 'package:xingshan/page/my/my_imo.dart';
+import 'package:xingshan/page/my/my_ranking_page.dart';
+import 'package:xingshan/page/my/my_setting_page.dart';
+import 'package:xingshan/page/my/my_task_page.dart';
+
 class XSMyPage extends StatefulWidget {
   XSMyPage({Key key, this.title}): super(key: key);
 
@@ -13,7 +21,7 @@ class XSMyPage extends StatefulWidget {
 
 class _XSMyPageState extends State<XSMyPage> {
 
-  _renderItem(image, text, index) {
+  _renderItem(image, text, index, page) {
 
     var borderWidth = index == 2 || index == 5 ? 9.0 : 3.0;
 
@@ -72,7 +80,7 @@ class _XSMyPageState extends State<XSMyPage> {
           ],
         ),
         onPressed: () {
-          // NavigatorUtils.goMyPage(index);
+          NavigatorUtils.NavigatorRouter(context, page);
         },
       ),
     );
@@ -83,13 +91,13 @@ class _XSMyPageState extends State<XSMyPage> {
   Widget build(BuildContext context) {
     Widget avatar = Image.asset('assets/images/avatar.jpg', width: 66.0);
     List<Widget> _items = [
-      _renderItem(XSICons.MY_MY_TASK, '我的任务', 1),
-      _renderItem(XSICons.MY_MY_TRACK, '行善轨迹', 2),
-      _renderItem(XSICons.MY_MY_RANKING, '我的排名', 3),
-      _renderItem(XSICons.MY_MY_BOX, '我的宝箱', 4),
-      _renderItem(XSICons.MY_MY_IMO, '我的imo+', 5),
-      _renderItem(XSICons.MY_MY_DYNAMIC, '我的动态', 6),
-      _renderItem(XSICons.MY_MY_SETTING, '更多设置', 7),
+      _renderItem(XSICons.MY_MY_TASK, '我的任务', 1, MyTaskPage()),
+      _renderItem(XSICons.MY_MY_TRACK, '行善轨迹', 2, XSTrackPage()),
+      _renderItem(XSICons.MY_MY_RANKING, '我的排名', 3, MyRankingPage()),
+      _renderItem(XSICons.MY_MY_BOX, '我的宝箱', 4, MyBox()),
+      _renderItem(XSICons.MY_MY_IMO, '我的imo+', 5, MyIMO()),
+      _renderItem(XSICons.MY_MY_DYNAMIC, '我的动态', 6, MyDynamicPage()),
+      _renderItem(XSICons.MY_MY_SETTING, '更多设置', 7, MySettingPage()),
     ];
     return ListView(
       shrinkWrap: true,
