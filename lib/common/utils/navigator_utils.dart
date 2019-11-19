@@ -14,6 +14,7 @@ import 'package:xingshan/page/project/pay_success_share_page.dart';
 
 import 'package:xingshan/page/found/task/task_detail_page.dart';
 import 'package:xingshan/page/found/dynamic/dynamic_detail_page.dart';
+import 'package:xingshan/page/found/task/publish_task_page.dart';
 
 // 导航栏
 class NavigatorUtils {
@@ -117,5 +118,9 @@ class NavigatorUtils {
   ) {
     NavigatorRouter(context,
      new TaskFilterDialog());
+  }
+  // 任务发布页面
+  static goPublishTaskPage(BuildContext context) {
+    NavigatorRouter(context, new XSPublishTaskPage());
   }
 }

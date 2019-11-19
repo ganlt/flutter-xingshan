@@ -107,13 +107,34 @@ class _XSTaskListPageState extends State<XSTaskListPage> {
           
         ],
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          color: XSColors.primaryLineValue,
-        ),
-        child: ListView(
-          children: _items,
-        ),
+      body: Flex(
+        direction: Axis.vertical,
+        children: <Widget>[
+          Expanded(
+            flex: 9,
+            child: Container(
+              decoration: BoxDecoration(
+                color: XSColors.primaryLineValue,
+              ),
+              child: ListView(
+                children: _items,
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.fromLTRB(40, 8, 40, 8),
+              child: MaterialButton(
+                onPressed: ()=> NavigatorUtils.goPublishTaskPage(context),
+                minWidth: double.infinity,
+                color: Theme.of(context).primaryColor,
+                textColor: XSColors.white,
+                child: Text('我也发一个任务'),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
