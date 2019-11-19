@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:xingshan/page/found/task/task_filter_dialog.dart';
 import 'package:xingshan/page/home/home_page.dart';
 import 'package:xingshan/page/login/login_page.dart';
 import 'package:xingshan/page/login/password_login_page.dart';
@@ -110,5 +111,11 @@ class NavigatorUtils {
     NavigatorRouter(context,
      new XSDynamicDetailPage());
   }
-
+  // 动态详情页
+  static AlertTaskDialog(
+    BuildContext context,
+  ) {
+    NavigatorRouter(context,
+     new TaskFilterDialog());
+  }
 }

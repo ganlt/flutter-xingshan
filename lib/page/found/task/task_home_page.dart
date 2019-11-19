@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:xingshan/common/style/style.dart';
 import 'package:xingshan/common/utils/navigator_utils.dart';
+import 'package:xingshan/page/found/task/task_filter_dialog.dart';
 
 class XSTaskListPage extends StatefulWidget {
   XSTaskListPage({Key key, this.title}): super(key: key);
@@ -66,6 +67,14 @@ class _XSTaskListPageState extends State<XSTaskListPage> {
       ),
     );
   }
+  Future<bool> showTaskFilterDialog() {
+    return showDialog<bool>(
+       context: context,
+      builder: (context) {
+        return TaskFilterDialog();
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -87,9 +96,15 @@ class _XSTaskListPageState extends State<XSTaskListPage> {
           ),
         ),
         actions: <Widget>[
-          Image(
-            image: AssetImage(XSICons.FOUND_TASKLIST_FILTRATE),
-          )
+          FlatButton(
+            onPressed: () async {
+              await showTaskFilterDialog();
+            },
+            child: Image(
+              image: AssetImage(XSICons.FOUND_TASKLIST_FILTRATE),
+            ),
+          ),
+          
         ],
       ),
       body: Container(

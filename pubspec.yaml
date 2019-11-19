@@ -101,6 +101,7 @@ flutter:
     - assets/images/icons/found/found_dialog_close_btn.png
     - assets/images/icons/found/found_task_share.png
     - assets/images/icons/found/found_dynamic_comment.png
+    - assets/images/icons/found/close_button.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
